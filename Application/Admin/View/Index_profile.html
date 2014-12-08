@@ -1,0 +1,77 @@
+<extend name="Common/base"/>
+<block name="content">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>个人信息</h1>
+            </div>
+        </div>
+    </div>
+    <div class="well bs-component">
+        <notempty name="message">
+            <div class="alert alert-dismissable alert-{$class}">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <p>{$message}</p>
+            </div>
+        </notempty>
+        <form action="{:U('Index/profile')}" method="post" class="form-horizontal" id="profile-modify">
+            <fieldset>
+                <input type="hidden" value="{$user.id}" name="id"/>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">姓名：</label>
+
+                    <div class="col-md-10">
+                        <div class="form-control-wrapper">
+                            <input type="text" name="nickname" class="form-control empty" value="{$user.nickname}"/>
+                            <span class="material-input"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">用户名及邮箱：</label>
+
+                    <div class="col-md-10">
+                        {$user.username} - {$user.email}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">提示问题：</label>
+
+                    <div class="col-md-10">
+                        <div class="form-control-wrapper">
+                            <input type="text" name="question" class="form-control empty" value="{$user.question}"/>
+                            <span class="material-input"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">答案：</label>
+
+                    <div class="col-md-10">
+                        <div class="form-control-wrapper">
+                            <input type="text" name="answer" class="form-control empty" value="{$user.answer}"/>
+                            <span class="material-input"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">验证码：</label>
+
+                    <div class="col-md-10">
+                        <div class="form-control-wrapper">
+                            <input type="text" name="verify" class="form-control empty" autocomplete="off" maxlength="4"/>
+                            <span class="material-input"></span>
+                            <img class="verify-captcha" src="{:U('Public/verify')}" alt="验证码"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10 col-md-offset-2">
+                    <button class="btn btn-default btn-raised" type="reset">重置</button>
+                    <button class="btn btn-primary btn-raised" type="submit">确认修改</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</block>

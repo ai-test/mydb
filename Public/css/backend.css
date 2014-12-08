@@ -1,0 +1,8 @@
+@import url(fonts.css);
+
+body, input, td, th, option, select, textarea, button {
+    font-family: 'Roboto', Arial, Helvetica, 'fzlantingheis', 'Microsoft YaHei', '宋体', Verdana, sans-serif;
+}
+
+/** login */
+.verify-captcha { position: absolute; right: 20%; top: 0; }

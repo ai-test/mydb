@@ -1,0 +1,28 @@
+<extend name="Common/base"/>
+<block name="content">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>数据库导入</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="well bs-component">
+        <form action="{:U('Db/import')}" method="post" class="form-horizontal" id="file-import" enctype="multipart/form-data">
+            <fieldset>
+                <legend>文件上传</legend>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">文件</label>
+
+                    <div class="col-md-10">
+                        <input type="file" name="db">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-2">
+                    <button class="btn btn-primary" type="submit">上传</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</block>

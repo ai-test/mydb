@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{:LANG_SET}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Database-后台管理</title>
+    <block name="css">
+        <!-- css files -->
+        <import type="css" file="css.bootstrap#min"/>
+        <import type="css" file="css.ripples#min"/>
+        <import type="css" file="css.material#min"/>
+        <import type="css" file="css.formValidation#min"/>
+        <import type="css" file="css.backend"/>
+    </block>
+
+    <!--[if lt IE 9]>
+    <import type="js" file="html5.html5shiv#min"/>
+    <import type="js" file="html5.respond#min"/>
+    <![endif]-->
+
+    <block name="js">
+        <!-- script files -->
+        <import type="js" file="js.jquery#min"/>
+        <import type="js" file="js.bootstrap#min"/>
+        <import type="js" file="js.formValidation#min"/>
+        <import type="js" file="js.framework.bootstrap#min"/>
+        <import type="js" file="js.ripples#min"/>
+        <import type="js" file="js.material#min"/>
+    </block>
+</head>
+<body id="{$Think.CONTROLLER_NAME}_{$Think.ACTION_NAME}">
+
+
+<block name="header">
+    <div class="bs-docs-section clearfix container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bs-component">
+                    <div class="navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="{:U('Index/index')}">My Database</a>
+                        </div>
+                        <div class="navbar-collapse collapse navbar-inverse-collapse">
+                            <ul class="nav navbar-nav">
+                                <li <?php if($Think.CONTROLLER_NAME == 'Index' && $Think.ACTION_NAME == 'index') echo 'class="active"'; ?>><a href="{:U('Index/index')}">首页</a></li>
+                                <li <?php if($Think.CONTROLLER_NAME == 'Db') echo 'class="active"'; ?>><a href="{:U('Db/index')}">数据库导入</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a>{$Think.session.be_user}，您好！</a></li>
+                                <li><a href="{:U('Public/logout')}">退出登录</a></li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">菜单 <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{:U('Index/profile')}">个人信息</a></li>
+                                        <li><a href="{:U('Index/password')}">修改密码</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+
+<div class="container">
+    <block name="content">
+    </block>
+</div> 
+
+<footer id="footer">
+</footer>
+
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
