@@ -57,6 +57,7 @@ return array(
     // frontend auth key
     'USER_AUTH_KEY' => 'auth_id',
     // backend auth key
-    'ADMIN_AUTH_KEY' => 'admin'
+    'ADMIN_AUTH_KEY' => 'admin',
 
+    'LOAD_EXT_CONFIG'=> 'settings'
 );

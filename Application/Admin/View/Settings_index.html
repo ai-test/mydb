@@ -1,0 +1,91 @@
+<extend name="Common/base"/>
+<block name="content">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>配置信息</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="well bs-component">
+        <form action="{:U('Settings/save')}" method="post" class="form-horizontal" id="settings-save">
+            <fieldset>
+                <legend>科目配置</legend>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目一</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_1" value="{$settings.km_1}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目二</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_2" value="{$settings.km_2}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目三</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_3" value="{$settings.km_3}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目四</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_4" value="{$settings.km_4}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目五</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_5" value="{$settings.km_5}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目六</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_6" value="{$settings.km_6}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目七</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_7" value="{$settings.km_7}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目八</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_8" value="{$settings.km_8}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目九</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_9" value="{$settings.km_9}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">科目十</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="km_10" value="{$settings.km_10}">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-2">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</block>
