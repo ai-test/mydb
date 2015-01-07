@@ -52,7 +52,7 @@ class SettingsController extends AdminController
             if (!is_file($settingsFile)) {
                 file_put_contents($settingsFile,"<?php\nreturn ". var_export($settings, true) . ";");
             }
-            $this->redirect('Settings/index');
         }
+        $this->redirect('Settings/index');
     }
 }
